@@ -1,18 +1,20 @@
+int min = 500;
+
 public void setup()
 {
   size(500, 500);
 }
 public void draw()
 {
-  sierpinski(0, 80, 80);
+  sierpinski(0, 500, 500);
 }
-public void mouseDragged()//optional
+public void mouseClicked()//optional
 {
-
+  min /= 2;
 }
 public void sierpinski(int x, int y, int len) 
 {
-  if(len <= 20){
+  if(len <= min){
     triangle(x, y, (x + len), y, (x + len/2), (y - len));
   }else{
     sierpinski(x, y, (len/2));
