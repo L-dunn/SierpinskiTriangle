@@ -3,6 +3,7 @@ int min = 500;
 public void setup()
 {
   size(500, 500);
+  noStroke();
 }
 public void draw()
 {
@@ -11,6 +12,7 @@ public void draw()
 public void mouseClicked()//optional
 {
   min /= 2;
+  fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
 }
 public void sierpinski(int x, int y, int len) 
 {
